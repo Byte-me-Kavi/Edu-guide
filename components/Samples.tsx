@@ -32,6 +32,7 @@ const categories = [
     description: "Database architectures, methodologies, and practical lab implementations.",
     items: [
       { title: "NoSQL & MongoDB Lab Implementation", file: "SE2020 - Lab Sheet 09 - NoSQL and Mongo DB.pdf", type: "PDF" },
+      { title: "Answer Script Assessment", file: "Answer Script 2.pdf", type: "PDF" },
       { title: "Web & Mobile Technologies: Lab 1", file: "WMT_Lab_1.pdf", type: "PDF" },
       { title: "Web & Mobile Technologies: Lab 3", file: "WMT_Lab_3.pdf", type: "PDF" }
     ]

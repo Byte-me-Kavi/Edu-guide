@@ -15,8 +15,8 @@ export default function VoicesCarousel({ voices }: { voices: any[] }) {
       setTimeout(() => {
         setCurrentIndex((prev) => (prev + 1) % voices.length);
         setIsAnimating(false);
-      }, 500); // 500ms fade duration
-    }, 5000);
+      }, 300); // 300ms fade duration
+    }, 3000);
 
     return () => clearInterval(timer);
   }, [voices.length]);
@@ -32,7 +32,7 @@ export default function VoicesCarousel({ voices }: { voices: any[] }) {
       {displayVoices.map((v, i) => (
         <figure
           key={`${currentIndex}-${i}`}
-          className={`relative bg-cream-paper border border-navy/15 rounded-3xl p-6 lg:p-7 shadow-[0_20px_50px_-25px_rgba(18,40,66,0.15)] transition-opacity duration-500 ${
+          className={`relative bg-cream-paper border border-navy/15 rounded-3xl p-6 lg:p-7 shadow-[0_20px_50px_-25px_rgba(18,40,66,0.15)] transition-opacity duration-300 ${
             isAnimating ? "opacity-0" : "opacity-100"
           } ${i === 1 ? "md:translate-y-6" : ""} ${
             i === 2 ? "md:translate-y-2" : ""
