@@ -65,26 +65,28 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="mailto:hello@eduguide.io"
+                  href="mailto:kaveeshatmdss@gmail.com"
                   className="hover:text-gold transition"
                 >
-                  hello@eduguide.io
+                  kaveeshatmdss@gmail.com
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/94770000000"
+                  href="mailto:hasindubandara759@gmail.com"
                   className="hover:text-gold transition"
                 >
-                  WhatsApp — +94 77 000 0000
+                  hasindubandara759@gmail.com
                 </a>
               </li>
               <li>
                 <a
-                  href="https://t.me/eduguide"
+                  href="https://wa.me/94789910287"
                   className="hover:text-gold transition"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Telegram — @eduguide
+                  WhatsApp — 078 991 0287
                 </a>
               </li>
             </ul>
@@ -94,10 +96,6 @@ export default function Footer() {
         <div className="mt-14 pt-6 border-t border-cream/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-cream/45">
           <p>
             © {new Date().getFullYear()} EduGuide. Student work, taken seriously.
-          </p>
-          <p className="flex items-center gap-2">
-            <span className="text-gold">✱</span> Issue Nº&nbsp;47 — set in Fraunces
-            &amp; Instrument Sans
           </p>
         </div>
       </div>

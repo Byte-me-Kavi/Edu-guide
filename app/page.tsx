@@ -5,6 +5,7 @@ import Process from "@/components/Process";
 import WhyDifferent from "@/components/WhyDifferent";
 import Domains from "@/components/Domains";
 import Voices from "@/components/Voices";
+import Reviews from "@/components/Reviews";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -20,6 +21,7 @@ export default function Home() {
         <WhyDifferent />
         <Domains />
         <Voices />
+        <Reviews />
         <Faq />
         <Contact />
       </main>

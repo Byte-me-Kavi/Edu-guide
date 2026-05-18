@@ -59,43 +59,66 @@ export default function Services() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-navy/12 border border-navy/12 rounded-3xl overflow-hidden shadow-[0_30px_60px_-30px_rgba(18,40,66,0.18)]">
-          {services.map((s, i) => (
-            <article
-              key={s.num}
-              className="group relative bg-cream-paper/85 hover:bg-cream-paper transition p-8 lg:p-10 flex flex-col gap-5 min-h-[280px]"
-            >
-              <div className="flex items-start justify-between">
-                <span className="font-display italic text-gold/90 text-lg">
-                  — {s.num}
-                </span>
-                {s.tag && (
-                  <span className="text-[10px] uppercase tracking-[0.15em] bg-navy text-cream px-2.5 py-1 rounded-full">
-                    {s.tag}
-                  </span>
-                )}
-              </div>
-              <h3 className="font-display text-3xl text-navy tracking-tight leading-[1.05]">
-                {s.title}
-              </h3>
-              <p
-                className="text-navy/70 leading-relaxed text-[15px]"
-                dangerouslySetInnerHTML={{ __html: s.body }}
-              />
-              <div className="mt-auto pt-3 inline-flex items-center gap-2 text-sm text-navy/55 group-hover:text-gold transition">
-                <span>Talk to us about this</span>
-                <span className="transition-transform group-hover:translate-x-1">
-                  →
-                </span>
-              </div>
-              {/* corner star */}
-              <span
-                aria-hidden
-                className="absolute bottom-4 right-5 text-gold/0 group-hover:text-gold/30 transition text-sm"
+          {services.map((s, i) => {
+            const isNavy = i % 2 !== 0;
+            return (
+              <article
+                key={s.num}
+                className={`group relative transition p-8 lg:p-10 flex flex-col gap-5 min-h-[280px] ${
+                  isNavy
+                    ? "bg-navy hover:bg-navy-deep"
+                    : "bg-cream-paper/85 hover:bg-cream-paper"
+                }`}
               >
-                ✱
-              </span>
-            </article>
-          ))}
+                <div className="flex items-start justify-between">
+                  <span className="font-display italic text-gold/90 text-lg">
+                    — {s.num}
+                  </span>
+                  {s.tag && (
+                    <span
+                      className={`text-[10px] uppercase tracking-[0.15em] px-2.5 py-1 rounded-full ${
+                        isNavy ? "bg-cream text-navy" : "bg-navy text-cream"
+                      }`}
+                    >
+                      {s.tag}
+                    </span>
+                  )}
+                </div>
+                <h3
+                  className={`font-display text-3xl tracking-tight leading-[1.05] ${
+                    isNavy ? "text-cream" : "text-navy"
+                  }`}
+                >
+                  {s.title}
+                </h3>
+                <p
+                  className={`leading-relaxed text-[15px] ${
+                    isNavy ? "text-cream/70" : "text-navy/70"
+                  }`}
+                  dangerouslySetInnerHTML={{ __html: s.body }}
+                />
+                <div
+                  className={`mt-auto pt-3 inline-flex items-center gap-2 text-sm transition ${
+                    isNavy
+                      ? "text-cream/55 group-hover:text-gold"
+                      : "text-navy/55 group-hover:text-gold"
+                  }`}
+                >
+                  <span>Talk to us about this</span>
+                  <span className="transition-transform group-hover:translate-x-1">
+                    →
+                  </span>
+                </div>
+                {/* corner star */}
+                <span
+                  aria-hidden
+                  className="absolute bottom-4 right-5 text-gold/0 group-hover:text-gold/30 transition text-sm"
+                >
+                  ✱
+                </span>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

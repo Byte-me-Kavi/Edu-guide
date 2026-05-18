@@ -37,11 +37,6 @@ export default function Process() {
                 <em className="italic text-gold/90">works</em>
               </h2>
             </div>
-            <p className="text-navy/70 leading-relaxed max-w-sm">
-              Four small steps. The point isn&rsquo;t to make this feel official —
-              it&rsquo;s to make sure nothing falls through the cracks while
-              you&rsquo;re juggling four other modules.
-            </p>
 
             {/* small illustration: stacked lines like book spines */}
             <div className="hidden lg:block mt-10 space-y-1.5 max-w-[160px]">

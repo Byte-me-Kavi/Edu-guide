@@ -19,7 +19,7 @@ export default function Nav() {
           </span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-7 text-[13px] text-navy/70">
+        <nav className="hidden md:flex items-center gap-7 text-[13px] text-navy">
           <a href="#services" className="hover:text-navy transition">
             Services
           </a>
@@ -30,7 +30,7 @@ export default function Nav() {
             Domains
           </a>
           <a href="#voices" className="hover:text-navy transition">
-            Voices
+            Reviews
           </a>
           <a href="#faq" className="hover:text-navy transition">
             FAQ
@@ -38,10 +38,10 @@ export default function Nav() {
         </nav>
 
         <a
-          href="#contact"
+          href="https://wa.me/94789910287"
           className="group inline-flex items-center gap-2 rounded-full bg-navy px-4 sm:px-5 py-2 sm:py-2.5 text-[13px] sm:text-sm text-cream hover:bg-navy-deep transition"
         >
-          Send a brief
+          Send Assignment
           <span className="transition-transform group-hover:translate-x-0.5">→</span>
         </a>
       </div>

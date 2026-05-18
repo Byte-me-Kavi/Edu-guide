@@ -16,22 +16,22 @@ export default function Hero() {
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10 pt-14 lg:pt-24 pb-20 lg:pb-28">
         {/* Eyebrow */}
         <div
-          className="flex items-center gap-3 text-sm text-navy/60 mb-10 rise"
+          className="flex items-center gap-3 text-sm text-navy mb-10 rise"
           style={{ animationDelay: "60ms" }}
         >
           <span className="text-gold text-lg leading-none">✱</span>
           <span className="uppercase tracking-[0.22em] text-[11px]">
             A small studio for student work
           </span>
-          <span className="h-px flex-1 max-w-[120px] bg-navy/20" />
-          <span className="hidden sm:inline text-[11px] uppercase tracking-[0.22em] text-navy/40">
+          <span className="h-px flex-1 max-w-[120px] bg-navy/80" />
+          <span className="hidden sm:inline text-[11px] uppercase tracking-[0.22em] text-navy">
             Est. 2021 — Issue Nº&nbsp;47
           </span>
         </div>
 
         {/* Headline */}
         <h1
-          className="rise font-display font-light text-[3rem] sm:text-7xl lg:text-[7.5rem] xl:text-[8.5rem] leading-[0.92] tracking-tightest text-navy max-w-[18ch]"
+          className="rise font-display font-light text-[3rem] sm:text-6xl lg:text-[6rem] xl:text-[7rem] leading-[0.92] tracking-tightest text-navy max-w-[18ch]"
           style={{ animationDelay: "180ms" }}
         >
           Find your way{" "}
@@ -64,10 +64,7 @@ export default function Hero() {
             className="lg:col-span-7 text-lg lg:text-xl text-navy/80 leading-relaxed max-w-2xl rise"
             style={{ animationDelay: "320ms" }}
           >
-            EduGuide is a small team of senior students and recent graduates helping you
-            ship assignments, projects, and final-year work across the entire IT domain
-            — with <span className="ink-underline">live walk-throughs</span> when you
-            actually want to understand it.
+            Expert help for IT students. We complete your assignments, coding projects, and final-year work on time — and provide <span className="ink-underline">live walk-throughs</span> so you fully understand the code.
           </p>
 
           <div
@@ -76,10 +73,12 @@ export default function Hero() {
           >
             <div className="flex flex-wrap gap-3">
               <a
-                href="#contact"
+                href="https://wa.me/94789910287"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3.5 text-cream hover:bg-navy-deep transition shadow-[0_8px_30px_-12px_rgba(18,40,66,0.5)]"
               >
-                Send your brief
+                Send your Assignment
                 <span className="transition-transform group-hover:translate-x-0.5">
                   →
                 </span>
@@ -91,10 +90,6 @@ export default function Hero() {
                 How it works ↓
               </a>
             </div>
-            <p className="text-[13px] text-navy/55 max-w-[22rem] lg:text-right leading-relaxed">
-              Most students reach out the week before a deadline. We&rsquo;d rather hear
-              from you a fortnight before — but we&rsquo;ll work with what you have.
-            </p>
           </div>
         </div>
 
@@ -126,6 +121,9 @@ export default function Hero() {
             Trusted by students at{" "}
             <span className="text-navy font-medium">IIT</span>,{" "}
             <span className="text-navy font-medium">SLIIT</span>,{" "}
+            <span className="text-navy font-medium">UCSC</span>,{" "}
+            <span className="text-navy font-medium">UOK</span>,{" "}
+            <span className="text-navy font-medium">ESOFT</span>,{" "}
             <span className="text-navy font-medium">NSBM</span>,{" "}
             <span className="text-navy font-medium">NIBM</span>,{" "}
             <span className="text-navy font-medium">APIIT</span>, and twenty-six other

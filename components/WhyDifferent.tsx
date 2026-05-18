@@ -1,7 +1,7 @@
 const pillars = [
   {
     t: "Live sessions",
-    d: "Zoom, Meet, or Discord. We walk through the code, the architecture, and the small decisions — at whatever pace you need.",
+    d: "1-on-1 walkthroughs via Zoom or Meet so you understand every line of code.",
     icon: (
       <svg viewBox="0 0 40 40" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="4" y="9" width="26" height="20" rx="2" />
@@ -13,7 +13,7 @@ const pillars = [
   },
   {
     t: "Group coordination",
-    d: "Whole teams reach out together. We help you split work fairly and stitch it back into one clean, consistent deliverable.",
+    d: "We help your whole team split the work fairly and merge it cleanly.",
     icon: (
       <svg viewBox="0 0 40 40" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="14" r="4" />
@@ -25,7 +25,7 @@ const pillars = [
   },
   {
     t: "Mentor, not vendor",
-    d: "We answer your messages weeks later. We follow up before viva. We remember you next semester — and your stack, too.",
+    d: "We stay in touch. We prep you for your viva and help you next semester too.",
     icon: (
       <svg viewBox="0 0 40 40" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M20 4 L24 14 L34 15 L26 22 L29 32 L20 27 L11 32 L14 22 L6 15 L16 14 Z" />
@@ -66,36 +66,44 @@ export default function WhyDifferent() {
         </div>
 
         <p className="font-display font-light text-3xl sm:text-4xl lg:text-6xl leading-[1.05] tracking-tightest max-w-5xl">
-          We&rsquo;re not a content mill. We&rsquo;re a small team of senior students
-          and recent graduates who genuinely{" "}
-          <em className="italic text-gold">care</em> whether you understand the work
-          you&rsquo;re handing in.
+          We don&rsquo;t just do the work. We make sure you{" "}
+          <em className="italic text-gold">understand</em> it.
         </p>
 
         <p className="mt-8 max-w-2xl text-cream/65 leading-relaxed">
-          Three things that show up in every project, whether it&rsquo;s a one-night
-          assignment or a six-month thesis.
+          Three core promises for every project, from simple assignments to full thesis systems.
         </p>
 
         <div className="mt-14 grid md:grid-cols-3 gap-px bg-cream/10 border border-cream/15 rounded-3xl overflow-hidden">
-          {pillars.map((p, i) => (
-            <div
-              key={p.t}
-              className="relative p-8 lg:p-10 bg-navy hover:bg-navy-deep transition group"
-            >
-              <div className="text-gold mb-5">{p.icon}</div>
-              <h3 className="font-display text-2xl lg:text-3xl mb-3 text-cream tracking-tight">
-                {p.t}
-              </h3>
-              <p className="text-cream/70 leading-relaxed text-[15px]">{p.d}</p>
-              <span
-                aria-hidden
-                className="absolute top-6 right-6 font-display italic text-gold/40 text-sm"
+          {pillars.map((p, i) => {
+            const isNavy = i % 2 !== 0; // index 1 is Navy, 0 and 2 are Cream
+            return (
+              <div
+                key={p.t}
+                className={`relative p-8 lg:p-10 transition group ${
+                  isNavy ? "bg-navy hover:bg-navy-deep" : "bg-cream-paper hover:bg-cream"
+                }`}
               >
-                — 0{i + 1}
-              </span>
-            </div>
-          ))}
+                <div className={`${isNavy ? "text-gold" : "text-navy"} mb-5`}>{p.icon}</div>
+                <h3 className={`font-display text-2xl lg:text-3xl mb-3 tracking-tight ${
+                  isNavy ? "text-cream" : "text-navy"
+                }`}>
+                  {p.t}
+                </h3>
+                <p className={`leading-relaxed text-[15px] ${
+                  isNavy ? "text-cream/70" : "text-navy/70"
+                }`}>{p.d}</p>
+                <span
+                  aria-hidden
+                  className={`absolute top-6 right-6 font-display italic text-sm ${
+                    isNavy ? "text-gold/40" : "text-navy/40"
+                  }`}
+                >
+                  — 0{i + 1}
+                </span>
+              </div>
+            );
+          })}
         </div>
 
         {/* fine print */}

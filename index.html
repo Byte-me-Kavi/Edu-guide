@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edu Guide Sri Lanka | #1 IT Assignment Help Service</title>
-    <meta name="description" content="Edu Guide Sri Lanka provides fast, affordable, and high-quality IT assignment help for undergraduate students in SLIIT, NSBM, IIT, APIIT, and more.">
+    <title>Edu Guide Sri Lanka | IT Assignment Help</title>
+    <meta name="description" content="Edu Guide Sri Lanka helps IT students with coding, reports, and thesis writing.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -18,9 +18,9 @@
             --secondary: #00D4FF;
             --accent: #FF6B6B;
             --bg-color: #0A0A0A;
-            --card-bg: #1A1A2E;
+            --card-bg: #141424;
             --text-main: #FFFFFF;
-            --text-muted: #B0B0B0;
+            --text-muted: #A0A0B0;
             --whatsapp: #25D366;
             --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
         }
@@ -40,7 +40,7 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             overflow-x: hidden;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         a {
@@ -52,7 +52,6 @@
             list-style: none;
         }
 
-        /* Typography & Utility */
         h1, h2, h3, h4 {
             font-weight: 700;
             line-height: 1.2;
@@ -60,20 +59,20 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 3rem;
-            position: relative;
         }
 
         .section-title span {
             background: var(--gradient);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         section {
             padding: 5rem 2rem;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -81,7 +80,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 0.8rem 1.8rem;
+            padding: 0.8rem 2rem;
             border-radius: 50px;
             font-weight: 600;
             font-size: 1rem;
@@ -94,22 +93,22 @@
         .btn-whatsapp {
             background-color: var(--whatsapp);
             color: white;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
         }
 
         .btn-whatsapp:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
 
         .btn-outline {
             background: transparent;
-            border: 2px solid var(--primary);
+            border: 1px solid rgba(255,255,255,0.2);
             color: var(--text-main);
         }
 
         .btn-outline:hover {
-            background: var(--primary);
+            border-color: var(--primary);
             color: white;
         }
 
@@ -117,17 +116,16 @@
             background: var(--gradient);
             color: white;
         }
-        
+
         .btn-gradient:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(108, 99, 255, 0.5);
+            box-shadow: 0 6px 20px rgba(108, 99, 255, 0.3);
         }
 
-        /* Reveal Animation */
         .reveal {
             opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
         }
 
         .reveal.active {
@@ -147,7 +145,7 @@
         }
 
         nav {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 1.2rem 2rem;
             display: flex;
@@ -158,7 +156,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 800;
-            color: var(--text-main);
+            letter-spacing: -0.5px;
         }
 
         .logo span {
@@ -171,13 +169,13 @@
         }
 
         .nav-links li a {
-            font-weight: 500;
-            font-size: 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
             transition: color 0.3s;
         }
 
         .nav-links li a:hover, .nav-links li a.active {
-            color: var(--secondary);
+            color: var(--text-main);
         }
 
         .hamburger {
@@ -188,7 +186,7 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -200,63 +198,40 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: -10%;
-            left: -10%;
-            width: 500px;
-            height: 500px;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
             background: var(--primary);
             border-radius: 50%;
-            filter: blur(150px);
-            opacity: 0.2;
+            filter: blur(200px);
+            opacity: 0.1;
             z-index: -1;
         }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -10%;
-            right: -10%;
-            width: 400px;
-            height: 400px;
-            background: var(--secondary);
-            border-radius: 50%;
-            filter: blur(150px);
-            opacity: 0.2;
-            z-index: -1;
+        .hero-content {
+            max-width: 700px;
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
         }
 
         .hero-content h1 span {
             background: var(--gradient);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .typing-container {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: var(--secondary);
-            margin-bottom: 2.5rem;
-            height: 40px;
-        }
-        
-        .cursor {
-            animation: blink 0.7s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+            margin-bottom: 3rem;
+            font-weight: 300;
         }
 
         .hero-btns {
@@ -265,231 +240,207 @@
             justify-content: center;
         }
 
-        /* Stats Section */
-        .stats {
+        /* How it Works */
+        .steps {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
+            gap: 1.5rem;
+        }
+
+        .step-card {
             text-align: center;
-        }
-
-        .stat-card {
             background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
+            padding: 2.5rem 1.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.03);
+            transition: transform 0.3s;
         }
         
-        .stat-number-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
+        .step-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255,255,255,0.1);
         }
 
-        .stat-text {
-            color: var(--text-muted);
+        .step-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .step-title {
+            font-size: 1rem;
             font-weight: 500;
         }
 
-        /* Services Section */
+        /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
 
         .service-card {
             background: var(--card-bg);
-            padding: 2.5rem 2rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: 0;
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.03);
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(108, 99, 255, 0.2);
-            border-color: rgba(108, 99, 255, 0.5);
-        }
-
-        .service-card:hover::before {
-            opacity: 0.05;
-        }
-
-        .service-content {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            background: rgba(108, 99, 255, 0.03);
         }
 
         .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            display: inline-block;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+
+        .service-card:hover .service-icon {
+            color: var(--primary);
         }
         
         .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-card p {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
         }
 
         .service-price {
-            font-weight: 700;
+            font-size: 0.9rem;
             color: var(--secondary);
             margin-bottom: 1.5rem;
-            font-size: 1.1rem;
         }
 
-        /* Portfolio Section */
+        /* Pricing Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .price-card {
+            background: var(--card-bg);
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.03);
+            text-align: center;
+        }
+
+        .price-card.popular {
+            border-color: var(--primary);
+            background: rgba(108, 99, 255, 0.02);
+            transform: scale(1.02);
+        }
+
+        .price-title {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .price-features {
+            text-align: left;
+            margin-bottom: 2.5rem;
+        }
+
+        .price-features li {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .price-features li i {
+            color: var(--primary);
+        }
+
+        /* Portfolio */
         .portfolio-filters {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 3rem;
+            gap: 0.5rem;
+            margin-bottom: 2.5rem;
         }
 
         .filter-btn {
-            background: var(--card-bg);
-            color: var(--text-main);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 0.5rem 1.5rem;
-            border-radius: 30px;
+            background: transparent;
+            color: var(--text-muted);
+            border: none;
+            padding: 0.5rem 1rem;
             cursor: pointer;
-            transition: all 0.3s;
-            font-family: inherit;
+            font-size: 0.9rem;
+            transition: color 0.3s;
         }
 
         .filter-btn.active, .filter-btn:hover {
-            background: var(--primary);
-            border-color: var(--primary);
+            color: var(--text-main);
         }
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
 
         .portfolio-card {
             background: var(--card-bg);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: transform 0.3s ease, opacity 0.3s ease;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.03);
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
         }
 
         .portfolio-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
+            border-color: rgba(255,255,255,0.1);
         }
-        
+
         .portfolio-card.hide {
             display: none;
         }
 
-        .portfolio-img {
-            height: 200px;
-            background: linear-gradient(45deg, #1A1A2E, #2A2A4A);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: rgba(255,255,255,0.05);
-            position: relative;
-        }
-        
-        .portfolio-img::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: var(--gradient);
-            opacity: 0.2;
-        }
-
-        .portfolio-info {
-            padding: 1.5rem;
-        }
-
-        .portfolio-info h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        .portfolio-tech {
-            font-size: 0.85rem;
-            color: var(--secondary);
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-
-        .portfolio-desc {
+        .portfolio-icon {
+            font-size: 2.5rem;
             color: var(--text-muted);
-            font-size: 0.95rem;
             margin-bottom: 1.5rem;
+        }
+
+        .portfolio-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
         }
 
         .tags {
             display: flex;
+            justify-content: center;
             gap: 0.5rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
         }
 
         .tag {
-            font-size: 0.8rem;
-            background: rgba(108, 99, 255, 0.1);
-            color: var(--primary);
-            padding: 0.2rem 0.8rem;
-            border-radius: 12px;
+            font-size: 0.75rem;
+            background: rgba(255,255,255,0.05);
+            color: var(--text-muted);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
         }
 
-        /* Universities Section */
-        .universities {
-            text-align: center;
-        }
-
+        /* Universities */
         .uni-grid {
             display: flex;
             flex-wrap: wrap;
@@ -501,484 +452,69 @@
             background: var(--card-bg);
             padding: 0.8rem 1.5rem;
             border-radius: 50px;
-            font-weight: 500;
+            font-size: 0.9rem;
             color: var(--text-muted);
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.03);
         }
 
-        .uni-badge:hover {
-            color: var(--text-main);
-            border-color: var(--primary);
-            background: rgba(108, 99, 255, 0.1);
-            transform: translateY(-3px);
-        }
-
-        /* How it Works */
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            position: relative;
-            margin-top: 3rem;
-        }
-
-        .step-card {
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .step-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--card-bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin: 0 auto 1.5rem;
-            border: 2px solid var(--primary);
-            box-shadow: 0 0 20px rgba(108, 99, 255, 0.2);
-            position: relative;
-        }
-        
-        .step-number {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background: var(--secondary);
-            color: var(--bg-color);
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            font-size: 0.8rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .step-title {
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        @media (min-width: 900px) {
-            .steps::after {
-                content: '';
-                position: absolute;
-                top: 40px;
-                left: 10%;
-                width: 80%;
-                height: 2px;
-                background: linear-gradient(90deg, transparent, var(--primary), transparent);
-                z-index: 0;
-            }
-        }
-
-        /* Pricing Section */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            align-items: center;
-            margin-top: 3rem;
-        }
-
-        .price-card {
-            background: var(--card-bg);
-            padding: 3rem 2rem;
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: transform 0.3s;
-            position: relative;
-        }
-
-        .price-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(255,255,255,0.2);
-        }
-
-        .price-card.popular {
-            border: 2px solid var(--primary);
-            background: linear-gradient(to bottom, #1A1A2E, #141424);
-            transform: scale(1.05);
-            box-shadow: 0 10px 40px rgba(108, 99, 255, 0.15);
-        }
-
-        .price-card.popular:hover {
-            transform: scale(1.05) translateY(-10px);
-        }
-
-        .popular-badge {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--gradient);
-            color: white;
-            padding: 0.3rem 1.5rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 10px rgba(108, 99, 255, 0.3);
-        }
-
-        .price-header {
-            margin-bottom: 2rem;
-        }
-
-        .price-title {
-            font-size: 1.3rem;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .price-card:nth-child(1) .price-title { color: var(--secondary); }
-        .price-card:nth-child(2) .price-title { color: var(--primary); }
-        .price-card:nth-child(3) .price-title { color: #FFD700; } /* Gold */
-
-        .price-amount {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .price-amount span {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .price-features {
-            text-align: left;
-            margin-bottom: 2.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .price-features li {
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .price-features li i {
-            color: var(--whatsapp);
-            margin-top: 4px;
-        }
-
-        /* Testimonials Section */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .testimonial-card {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.05);
-            position: relative;
-        }
-        
-        .testimonial-card::after {
-            content: '\f10d';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            font-size: 3rem;
-            color: rgba(255,255,255,0.03);
-        }
-
-        .stars {
-            color: #FFD700;
-            margin-bottom: 1.2rem;
-            font-size: 1.1rem;
-        }
-
-        .review-text {
-            color: var(--text-muted);
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .reviewer-info {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 1.5rem;
-        }
-        
-        .reviewer-avatar {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: var(--gradient);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        .reviewer-details .name {
-            font-weight: 600;
-            color: var(--text-main);
-            display: block;
-        }
-        
-        .reviewer-details .uni {
-            font-size: 0.85rem;
-            color: var(--secondary);
-        }
-
-        /* FAQ Section */
+        /* FAQ */
         .faq-container {
-            max-width: 800px;
-            margin: 3rem auto 0;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         .faq-item {
             background: var(--card-bg);
-            border-radius: 10px;
+            border-radius: 12px;
             margin-bottom: 1rem;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.03);
             overflow: hidden;
-            transition: all 0.3s;
-        }
-        
-        .faq-item:hover {
-            border-color: rgba(108, 99, 255, 0.3);
         }
 
         .faq-question {
-            padding: 1.5rem;
+            padding: 1.2rem 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: background 0.3s;
-        }
-
-        .faq-question:hover {
-            background: rgba(255,255,255,0.02);
+            font-size: 0.95rem;
         }
 
         .faq-answer {
             padding: 0 1.5rem;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
+            transition: max-height 0.3s ease;
             color: var(--text-muted);
-            opacity: 0;
+            font-size: 0.9rem;
         }
 
         .faq-item.active .faq-answer {
             padding: 0 1.5rem 1.5rem;
-            max-height: 500px;
-            opacity: 1;
-        }
-
-        .faq-item.active .faq-question {
-            color: var(--secondary);
-        }
-
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-            color: var(--secondary);
-        }
-
-        .faq-question i {
-            transition: transform 0.3s;
-            color: var(--primary);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            text-align: center;
-            background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(0, 212, 255, 0.1)), var(--card-bg);
-            border-radius: 20px;
-            padding: 4rem 2rem;
-            margin: 4rem auto 0;
-            border: 1px solid rgba(108, 99, 255, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 5px;
-            background: var(--gradient);
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 2.5rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .contact-info a {
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            transition: all 0.3s;
-            background: rgba(255,255,255,0.03);
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-        }
-
-        .contact-info a:hover {
-            color: var(--text-main);
-            background: rgba(108, 99, 255, 0.1);
-            transform: translateY(-3px);
-        }
-        
-        .contact-info a i {
-            color: var(--primary);
-            font-size: 1.2rem;
+            max-height: 200px;
         }
 
         /* Footer */
         footer {
-            background: #050505;
+            text-align: center;
             padding: 4rem 2rem 2rem;
             border-top: 1px solid rgba(255,255,255,0.05);
             margin-top: 2rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
+            color: var(--text-muted);
         }
 
         .footer-logo {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 800;
+            color: var(--text-main);
             margin-bottom: 1rem;
         }
-        
+
         .footer-logo span {
             color: var(--primary);
         }
 
-        .footer-desc {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-heading {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            color: white;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-        
-        .footer-heading::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 40px;
-            height: 2px;
-            background: var(--primary);
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links a {
-            color: var(--text-muted);
-            transition: color 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .footer-links a::before {
-            content: '\f105';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            font-size: 0.8rem;
-            color: var(--primary);
-        }
-
-        .footer-links a:hover {
-            color: var(--secondary);
-            padding-left: 5px;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.05);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-main);
-            transition: all 0.3s;
-        }
-        
-        .social-links a:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: var(--text-muted);
-        }
-
-        /* Floating WhatsApp Button */
+        /* WhatsApp Button */
         .floating-wa {
             position: fixed;
             bottom: 30px;
@@ -992,9 +528,8 @@
             align-items: center;
             justify-content: center;
             font-size: 2rem;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
             z-index: 1000;
-            animation: pulse 2s infinite;
             transition: transform 0.3s;
         }
 
@@ -1002,754 +537,283 @@
             transform: scale(1.1);
         }
 
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .hero-content h1 { font-size: 2.8rem; }
-            .stats { grid-template-columns: repeat(2, 1fr); }
-            .price-card.popular { transform: none; }
-            .price-card.popular:hover { transform: translateY(-10px); }
-        }
-
         @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                right: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: var(--bg-color);
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                transition: 0.3s;
-            }
-            .nav-links.active { right: 0; }
-            .hamburger { display: block; }
-            .hero-content h1 { font-size: 2.2rem; }
-            .typing-container { font-size: 1.4rem; }
-            .hero-btns { flex-direction: column; }
-            .steps { grid-template-columns: 1fr; }
-            .steps::after { display: none; }
-            .step-card { display: flex; align-items: center; text-align: left; gap: 1.5rem; }
-            .step-icon { margin: 0; min-width: 60px; height: 60px; font-size: 1.5rem; }
-            .step-number { top: -5px; right: -5px; }
-            .cta-section h2 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1rem; }
+            .steps { grid-template-columns: repeat(2, 1fr); }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .price-card.popular { transform: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <nav>
             <div class="logo">Edu<span>Guide</span></div>
             <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#portfolio">Work</a></li>
+                <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content reveal">
-            <h1>Sri Lanka's #1 <br><span>IT Assignment Help Service</span></h1>
-            <p class="hero-subtitle">Fast | Affordable | Quality Guaranteed</p>
-            
-            <div class="typing-container">
-                <span id="typing-text"></span><span class="cursor">|</span>
-            </div>
-
+            <h1>IT Assignment <span>Help</span></h1>
+            <p class="hero-subtitle">Clear your coursework and get your projects done without the stress.</p>
             <div class="hero-btns">
                 <a href="https://wa.me/94789910287" class="btn btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp Us Now
-                </a>
-                <a href="#portfolio" class="btn btn-outline">
-                    View Our Work
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="reveal">
-        <div class="stats">
-            <div class="stat-card">
-                <div class="stat-number-wrapper"><span class="stat-number" data-target="500">0</span>+</div>
-                <div class="stat-text">Students Helped</div>
+    <section id="how-it-works" class="reveal" style="padding-top: 0;">
+        <div class="steps">
+            <div class="step-card">
+                <div class="step-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="step-title">1. Message Us</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-number-wrapper"><span class="stat-number" data-target="15">0</span>+</div>
-                <div class="stat-text">All Universities</div>
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-file-alt"></i></div>
+                <div class="step-title">2. Send Details</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-number-wrapper"><span class="stat-number" data-target="24">0</span>hr</div>
-                <div class="stat-text">Fast Delivery</div>
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-tag"></i></div>
+                <div class="step-title">3. Get Quote</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-number-wrapper"><span class="stat-number" data-target="100">0</span>%</div>
-                <div class="stat-text">Satisfaction</div>
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-check"></i></div>
+                <div class="step-title">4. Receive Work</div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="reveal">
-        <h2 class="section-title">Our <span>Services</span></h2>
+        <h2 class="section-title">What We <span>Do</span></h2>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-content">
-                    <div class="service-icon"><i class="fas fa-laptop-code" style="color: var(--primary);"></i></div>
-                    <h3>Coding Assignments</h3>
-                    <p>Java, Python, C++, C#</p>
-                    <div class="service-price">From LKR 2,500</div>
-                    <a href="https://wa.me/94789910287" class="btn btn-outline" target="_blank">Get Quote</a>
-                </div>
+                <div class="service-icon"><i class="fas fa-book-open"></i></div>
+                <h3>Research & Reports</h3>
+                <div class="service-price">From LKR 3,000</div>
+                <a href="https://wa.me/94789910287" class="btn btn-outline" target="_blank">Get Started</a>
             </div>
             <div class="service-card">
-                <div class="service-content">
-                    <div class="service-icon"><i class="fas fa-globe" style="color: var(--secondary);"></i></div>
-                    <h3>Web Development</h3>
-                    <p>HTML, CSS, JS, React, PHP</p>
-                    <div class="service-price">From LKR 3,500</div>
-                    <a href="https://wa.me/94789910287" class="btn btn-outline" target="_blank">Get Quote</a>
-                </div>
+                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Coding (Java/Python)</h3>
+                <div class="service-price">From LKR 2,500</div>
+                <a href="https://wa.me/94789910287" class="btn btn-outline" target="_blank">Get Started</a>
             </div>
             <div class="service-card">
-                <div class="service-content">
-                    <div class="service-icon"><i class="fas fa-database" style="color: var(--accent);"></i></div>
-                    <h3>Database Design</h3>
-                    <p>MySQL, MongoDB, Oracle</p>
-                    <div class="service-price">From LKR 2,500</div>
-                    <a href="https://wa.me/94789910287" class="btn btn-outline" target="_blank">Get Quote</a>
-                </div>
+                <div class="service-icon"><i class="fas fa-globe"></i></div>
+                <h3>Web Development</h3>
+                <div class="service-price">From LKR 3,500</div>
+                <a href="https://wa.me/94789910287" class="btn btn-outline" target="_blank">Get Started</a>
             </div>
             <div class="service-card">
-                <div class="service-content">
-                    <div class="service-icon"><i class="fas fa-file-alt" style="color: var(--primary);"></i></div>
-                    <h3>Research Papers</h3>
-                    <p>IT Reports & Documentation</p>
-                    <div class="service-price">From LKR 3,000</div>
-                    <a href="https://wa.me/94789910287" class="btn btn-outline" target="_blank">Get Quote</a>
-                </div>
+                <div class="service-icon"><i class="fas fa-database"></i></div>
+                <h3>Database Design</h3>
+                <div class="service-price">From LKR 2,500</div>
+                <a href="https://wa.me/94789910287" class="btn btn-outline" target="_blank">Get Started</a>
             </div>
             <div class="service-card">
-                <div class="service-content">
-                    <div class="service-icon"><i class="fas fa-graduation-cap" style="color: #FFD700;"></i></div>
-                    <h3>Final Year Projects</h3>
-                    <p>Complete FYP with Documentation</p>
-                    <div class="service-price">From LKR 35,000</div>
-                    <a href="https://wa.me/94789910287" class="btn btn-outline" target="_blank">Get Quote</a>
-                </div>
+                <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3>Final Year Projects</h3>
+                <div class="service-price">From LKR 35,000</div>
+                <a href="https://wa.me/94789910287" class="btn btn-outline" target="_blank">Get Started</a>
             </div>
             <div class="service-card">
-                <div class="service-content">
-                    <div class="service-icon"><i class="fas fa-video" style="color: var(--secondary);"></i></div>
-                    <h3>Online Sessions</h3>
-                    <p>1-on-1 Live Tutoring & Viva Prep</p>
-                    <div class="service-price">From LKR 2,500</div>
-                    <a href="https://wa.me/94789910287" class="btn btn-outline" target="_blank">Get Quote</a>
-                </div>
+                <div class="service-icon"><i class="fas fa-video"></i></div>
+                <h3>Viva Preparation</h3>
+                <div class="service-price">From LKR 2,500</div>
+                <a href="https://wa.me/94789910287" class="btn btn-outline" target="_blank">Get Started</a>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <section id="pricing" class="reveal">
+        <h2 class="section-title">Simple <span>Prices</span></h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <div class="price-title">Basic</div>
+                <div class="price-amount">2,500+</div>
+                <ul class="price-features">
+                    <li><i class="fas fa-check"></i> Small Assignments</li>
+                    <li><i class="fas fa-check"></i> 24hr Delivery</li>
+                    <li><i class="fas fa-check"></i> Free Revisions</li>
+                </ul>
+                <a href="https://wa.me/94789910287" class="btn btn-outline" style="width: 100%;" target="_blank">Order Now</a>
+            </div>
+            <div class="price-card popular">
+                <div class="price-title" style="color: var(--primary);">Standard</div>
+                <div class="price-amount">5,000+</div>
+                <ul class="price-features">
+                    <li><i class="fas fa-check"></i> Large Projects</li>
+                    <li><i class="fas fa-check"></i> Research Reports</li>
+                    <li><i class="fas fa-check"></i> Code Explanation</li>
+                </ul>
+                <a href="https://wa.me/94789910287" class="btn btn-gradient" style="width: 100%;" target="_blank">Order Now</a>
+            </div>
+            <div class="price-card">
+                <div class="price-title">Premium</div>
+                <div class="price-amount">35k+</div>
+                <ul class="price-features">
+                    <li><i class="fas fa-check"></i> Final Year Project</li>
+                    <li><i class="fas fa-check"></i> Full Thesis Writing</li>
+                    <li><i class="fas fa-check"></i> Viva Support</li>
+                </ul>
+                <a href="https://wa.me/94789910287" class="btn btn-outline" style="width: 100%;" target="_blank">Order Now</a>
+            </div>
+        </div>
+    </section>
+
     <section id="portfolio" class="reveal">
-        <h2 class="section-title">Our Recent <span>Works</span></h2>
-        
+        <h2 class="section-title">Our <span>Work</span></h2>
         <div class="portfolio-filters">
             <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="writing">Reports</button>
             <button class="filter-btn" data-filter="java">Java</button>
-            <button class="filter-btn" data-filter="web">Web Dev</button>
-            <button class="filter-btn" data-filter="react">React</button>
+            <button class="filter-btn" data-filter="web">Web</button>
             <button class="filter-btn" data-filter="database">Database</button>
-            <button class="filter-btn" data-filter="research">Research</button>
-            <button class="filter-btn" data-filter="python">Python</button>
         </div>
-
         <div class="portfolio-grid">
+            <div class="portfolio-card" data-category="writing">
+                <div class="portfolio-icon"><i class="fas fa-file-word"></i></div>
+                <h3>Cloud Computing Thesis</h3>
+                <div class="tags"><span class="tag">Report</span><span class="tag">IEEE</span></div>
+            </div>
             <div class="portfolio-card" data-category="java">
-                <div class="portfolio-img"><i class="fab fa-java"></i></div>
-                <div class="portfolio-info">
-                    <h3>Library Management System</h3>
-                    <div class="portfolio-tech">Java, OOP, File Handling</div>
-                    <p class="portfolio-desc">Complete library system with book management, member registration and borrowing system.</p>
-                    <div class="tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">OOP</span>
-                    </div>
-                    <a href="https://wa.me/94789910287" class="btn btn-outline" style="width: 100%;" target="_blank">View Details</a>
-                </div>
+                <div class="portfolio-icon"><i class="fab fa-java"></i></div>
+                <h3>Library System</h3>
+                <div class="tags"><span class="tag">Java</span><span class="tag">OOP</span></div>
             </div>
-            
             <div class="portfolio-card" data-category="web">
-                <div class="portfolio-img"><i class="fas fa-code"></i></div>
-                <div class="portfolio-info">
-                    <h3>Student Portal Website</h3>
-                    <div class="portfolio-tech">HTML, CSS, JavaScript</div>
-                    <p class="portfolio-desc">Responsive student portal with login, dashboard, course management and grade viewing.</p>
-                    <div class="tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JS</span>
-                    </div>
-                    <a href="https://wa.me/94789910287" class="btn btn-outline" style="width: 100%;" target="_blank">View Details</a>
-                </div>
+                <div class="portfolio-icon"><i class="fab fa-react"></i></div>
+                <h3>E-Commerce App</h3>
+                <div class="tags"><span class="tag">React</span><span class="tag">Web</span></div>
             </div>
-
-            <div class="portfolio-card" data-category="react">
-                <div class="portfolio-img"><i class="fab fa-react"></i></div>
-                <div class="portfolio-info">
-                    <h3>E-Commerce React App</h3>
-                    <div class="portfolio-tech">React, useState, useEffect</div>
-                    <p class="portfolio-desc">Full featured shopping app with cart management, product filtering and checkout process.</p>
-                    <div class="tags">
-                        <span class="tag">React</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                    <a href="https://wa.me/94789910287" class="btn btn-outline" style="width: 100%;" target="_blank">View Details</a>
-                </div>
-            </div>
-
             <div class="portfolio-card" data-category="database">
-                <div class="portfolio-img"><i class="fas fa-database"></i></div>
-                <div class="portfolio-info">
-                    <h3>Hospital Database System</h3>
-                    <div class="portfolio-tech">MySQL, ER Diagram</div>
-                    <p class="portfolio-desc">Normalized hospital database with patient records, appointments and billing system.</p>
-                    <div class="tags">
-                        <span class="tag">MySQL</span>
-                        <span class="tag">Database</span>
-                    </div>
-                    <a href="https://wa.me/94789910287" class="btn btn-outline" style="width: 100%;" target="_blank">View Details</a>
-                </div>
+                <div class="portfolio-icon"><i class="fas fa-database"></i></div>
+                <h3>Hospital DB</h3>
+                <div class="tags"><span class="tag">MySQL</span><span class="tag">SQL</span></div>
             </div>
-
-            <div class="portfolio-card" data-category="research">
-                <div class="portfolio-img"><i class="fas fa-file-word"></i></div>
-                <div class="portfolio-info">
-                    <h3>Cloud Computing Research Paper</h3>
-                    <div class="portfolio-tech">IEEE Format, 3000 words</div>
-                    <p class="portfolio-desc">Complete research paper on cloud computing security with literature review and analysis.</p>
-                    <div class="tags">
-                        <span class="tag">Research</span>
-                        <span class="tag">IT</span>
-                    </div>
-                    <a href="https://wa.me/94789910287" class="btn btn-outline" style="width: 100%;" target="_blank">View Details</a>
-                </div>
+            <div class="portfolio-card" data-category="writing">
+                <div class="portfolio-icon"><i class="fas fa-file-alt"></i></div>
+                <h3>System Analysis Report</h3>
+                <div class="tags"><span class="tag">UML</span><span class="tag">Doc</span></div>
             </div>
-
-            <div class="portfolio-card" data-category="python">
-                <div class="portfolio-img"><i class="fab fa-python"></i></div>
-                <div class="portfolio-info">
-                    <h3>Inventory Management System</h3>
-                    <div class="portfolio-tech">Python, OOP, SQLite</div>
-                    <p class="portfolio-desc">Command line inventory system with product tracking, sales reports and data persistence.</p>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">OOP</span>
-                    </div>
-                    <a href="https://wa.me/94789910287" class="btn btn-outline" style="width: 100%;" target="_blank">View Details</a>
-                </div>
+            <div class="portfolio-card" data-category="web">
+                <div class="portfolio-icon"><i class="fas fa-code"></i></div>
+                <h3>Student Portal</h3>
+                <div class="tags"><span class="tag">HTML</span><span class="tag">JS</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Universities Section -->
-    <section class="universities reveal">
-        <h2 class="section-title">We Help Students <span>From</span></h2>
+    <section class="reveal" style="padding-top: 0;">
+        <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 2rem;">Universities We Help</h2>
         <div class="uni-grid">
             <div class="uni-badge">SLIIT</div>
             <div class="uni-badge">NSBM</div>
             <div class="uni-badge">IIT</div>
             <div class="uni-badge">APIIT</div>
             <div class="uni-badge">ICBT</div>
-            <div class="uni-badge">University of Moratuwa</div>
+            <div class="uni-badge">Moratuwa</div>
             <div class="uni-badge">UCSC</div>
-            <div class="uni-badge">Horizon Campus</div>
-            <div class="uni-badge">NIBM</div>
-            <div class="uni-badge">Esoft</div>
-            <div class="uni-badge">British Council</div>
         </div>
     </section>
 
-    <!-- How it Works Section -->
-    <section class="reveal">
-        <h2 class="section-title">How It <span>Works</span></h2>
-        <div class="steps">
-            <div class="step-card">
-                <div class="step-icon">
-                    <i class="fab fa-whatsapp" style="color: var(--whatsapp);"></i>
-                    <div class="step-number">1</div>
-                </div>
-                <h3 class="step-title">Message Us on WhatsApp</h3>
-            </div>
-            <div class="step-card">
-                <div class="step-icon">
-                    <i class="fas fa-clipboard-list" style="color: var(--secondary);"></i>
-                    <div class="step-number">2</div>
-                </div>
-                <h3 class="step-title">Share Your Requirements</h3>
-            </div>
-            <div class="step-card">
-                <div class="step-icon">
-                    <i class="fas fa-bolt" style="color: var(--accent);"></i>
-                    <div class="step-number">3</div>
-                </div>
-                <h3 class="step-title">Get Your Quote in 15 min</h3>
-            </div>
-            <div class="step-card">
-                <div class="step-icon">
-                    <i class="fas fa-check-circle" style="color: var(--whatsapp);"></i>
-                    <div class="step-number">4</div>
-                </div>
-                <h3 class="step-title">Receive Quality Work</h3>
-            </div>
+    <section id="reviews" class="reveal">
+        <h2 class="section-title">Student <span>Reviews</span></h2>
+        <div style="max-width: 800px; margin: 0 auto; background: var(--card-bg); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.03); min-height: 300px;">
+            <div id="cusdis_thread"
+              data-host="https://cusdis.com"
+              data-app-id="bdb02ed7-a892-49d2-97a3-a634bc0cdaff"
+              data-page-id="edu-guide-home"
+              data-page-url="https://eduguidesl.com/"
+              data-page-title="Edu Guide Sri Lanka"
+              data-theme="dark"
+            ></div>
+            <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="reveal">
-        <h2 class="section-title">Clear & Transparent <span>Pricing</span></h2>
-        <div class="pricing-grid">
-            
-            <div class="price-card">
-                <div class="price-header">
-                    <div class="price-title">BASIC</div>
-                    <div class="price-amount"><span>LKR</span> 2,500<span>+</span></div>
-                    <p style="color: var(--text-muted);">Simple Assignments</p>
-                </div>
-                <ul class="price-features">
-                    <li><i class="fas fa-check-circle"></i> Single assignments</li>
-                    <li><i class="fas fa-check-circle"></i> 24hr delivery</li>
-                    <li><i class="fas fa-check-circle"></i> Free revision</li>
-                    <li><i class="fas fa-check-circle"></i> All languages</li>
-                </ul>
-                <a href="https://wa.me/94789910287" class="btn btn-outline" style="width: 100%;" target="_blank">Get Started</a>
-            </div>
-
-            <div class="price-card popular">
-                <div class="popular-badge">MOST POPULAR</div>
-                <div class="price-header">
-                    <div class="price-title">STANDARD</div>
-                    <div class="price-amount"><span>LKR</span> 5,000<span>+</span></div>
-                    <p style="color: var(--text-muted);">Projects & Reports</p>
-                </div>
-                <ul class="price-features">
-                    <li><i class="fas fa-check-circle"></i> Complex projects</li>
-                    <li><i class="fas fa-check-circle"></i> Same day delivery</li>
-                    <li><i class="fas fa-check-circle"></i> Free revisions</li>
-                    <li><i class="fas fa-check-circle"></i> Documentation included</li>
-                    <li><i class="fas fa-check-circle"></i> Code explanation</li>
-                </ul>
-                <a href="https://wa.me/94789910287" class="btn btn-gradient" style="width: 100%;" target="_blank">Get Started</a>
-            </div>
-
-            <div class="price-card">
-                <div class="price-header">
-                    <div class="price-title">PREMIUM</div>
-                    <div class="price-amount"><span>LKR</span> 35,000<span>+</span></div>
-                    <p style="color: var(--text-muted);">Final Year Projects</p>
-                </div>
-                <ul class="price-features">
-                    <li><i class="fas fa-check-circle"></i> Complete FYP</li>
-                    <li><i class="fas fa-check-circle"></i> Full documentation</li>
-                    <li><i class="fas fa-check-circle"></i> Viva preparation</li>
-                    <li><i class="fas fa-check-circle"></i> Unlimited revisions</li>
-                    <li><i class="fas fa-check-circle"></i> Ongoing support</li>
-                </ul>
-                <a href="https://wa.me/94789910287" class="btn btn-outline" style="width: 100%;" target="_blank">Get Started</a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="reveal">
-        <h2 class="section-title">What Students <span>Say</span></h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p class="review-text">"Got my Java assignment done in just 3 hours! Amazing quality and very affordable. Highly recommend to all SLIIT students!"</p>
-                <div class="reviewer-info">
-                    <div class="reviewer-avatar">K</div>
-                    <div class="reviewer-details">
-                        <span class="name">Kasun P.</span>
-                        <span class="uni">SLIIT 3rd Year</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p class="review-text">"My React project was perfect! The code was well commented and easy to understand. Will definitely use again for my FYP!"</p>
-                <div class="reviewer-info">
-                    <div class="reviewer-avatar">N</div>
-                    <div class="reviewer-details">
-                        <span class="name">Nethmi S.</span>
-                        <span class="uni">NSBM 2nd Year</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p class="review-text">"Research paper was delivered overnight with proper IEEE format. Saved my semester! Thank you Edu Guide!"</p>
-                <div class="reviewer-info">
-                    <div class="reviewer-avatar">A</div>
-                    <div class="reviewer-details">
-                        <span class="name">Ashan R.</span>
-                        <span class="uni">IIT Final Year</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
     <section id="faq" class="reveal">
-        <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+        <h2 class="section-title">Common <span>Questions</span></h2>
         <div class="faq-container">
-            
             <div class="faq-item">
-                <div class="faq-question">
-                    Which universities do you cover?
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>We help students from ALL Sri Lankan universities including SLIIT, NSBM, IIT, APIIT, ICBT, University of Moratuwa, UCSC and more.</p>
-                </div>
+                <div class="faq-question">Will the work be copied? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer"><p style="padding-top: 1rem;">No, everything is written from scratch with 0% plagiarism.</p></div>
             </div>
-            
             <div class="faq-item">
-                <div class="faq-question">
-                    How fast can you deliver?
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Most assignments are delivered within 24 hours. Urgent same-day delivery is also available for tight deadlines.</p>
-                </div>
+                <div class="faq-question">How fast can you deliver? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer"><p style="padding-top: 1rem;">Usually within 24 hours. Urgent requests can be done faster.</p></div>
             </div>
-            
             <div class="faq-item">
-                <div class="faq-question">
-                    Is the work original?
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes! All work is custom written and coded for your specific requirements. We guarantee zero plagiarism and never resell or reuse work.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    What payment methods do you accept?
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Bank transfer, eZ Cash, Dialog Pay, Genie and cash meetup in Colombo.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    What if I'm not satisfied?
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Your satisfaction is our priority. We offer FREE revisions until you are 100% satisfied with the final output.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    Do you help with viva preparation?
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes! We offer 1-on-1 online sessions for viva prep, full code explanation, and exam preparation to ensure you can confidently present your work.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Contact/CTA Section -->
-    <section class="reveal">
-        <div class="cta-section">
-            <h2>Ready to Get Your Work Done?</h2>
-            <p>Message us now and get your quote in 15 minutes! Fast response guaranteed.</p>
-            <a href="https://wa.me/94789910287" class="btn btn-whatsapp" style="font-size: 1.2rem; padding: 1rem 2.5rem;" target="_blank">
-                <i class="fab fa-whatsapp"></i> Message on WhatsApp
-            </a>
-            
-            <div class="contact-info">
-                <a href="tel:+94789910287"><i class="fas fa-phone"></i> +94 78 991 0287</a>
-                <a href="#" target="_blank"><i class="fab fa-facebook"></i> Edu Guide Sri Lanka</a>
-                <a href="mailto:hello@eduguidesl.com"><i class="fas fa-envelope"></i> hello@eduguidesl.com</a>
+                <div class="faq-question">What if there is a mistake? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer"><p style="padding-top: 1rem;">We offer free revisions until you are completely satisfied.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-col">
-                <div class="footer-logo">Edu<span>Guide</span></div>
-                <p class="footer-desc">The most trusted and premium IT assignment help service for Sri Lankan undergraduates. Quality work, delivered on time.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://wa.me/94789910287" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-col">
-                <h4 class="footer-heading">Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="#services">Our Services</a></li>
-                    <li><a href="#portfolio">Recent Works</a></li>
-                    <li><a href="#pricing">Pricing Plans</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h4 class="footer-heading">Universities</h4>
-                <ul class="footer-links">
-                    <li><a href="#">SLIIT</a></li>
-                    <li><a href="#">NSBM</a></li>
-                    <li><a href="#">IIT & APIIT</a></li>
-                    <li><a href="#">University of Moratuwa</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h4 class="footer-heading">Contact Us</h4>
-                <ul class="footer-links">
-                    <li><a href="https://wa.me/94789910287"><i class="fab fa-whatsapp" style="margin-right: 5px;"></i> WhatsApp Available 24/7</a></li>
-                    <li><a href="#"><i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i> Colombo, Sri Lanka</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2026 Edu Guide Sri Lanka. All rights reserved.</p>
-        </div>
+        <div class="footer-logo">Edu<span>Guide</span></div>
+        <p style="margin-bottom: 2rem;">Sri Lanka's #1 IT Assignment Help Service.</p>
+        <p>&copy; 2026 Edu Guide Sri Lanka. All rights reserved.</p>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/94789910287" class="floating-wa" target="_blank" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/94789910287" class="floating-wa" target="_blank" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- JavaScript -->
     <script>
-        // Typing Animation
-        const words = ["Java Assignments", "Python Projects", "React Applications", "MySQL Databases", "Research Papers", "Final Year Projects"];
-        let wordIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const typingText = document.getElementById('typing-text');
-        
-        function type() {
-            const currentWord = words[wordIndex];
-            
-            if (isDeleting) {
-                typingText.textContent = currentWord.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingText.textContent = currentWord.substring(0, charIndex + 1);
-                charIndex++;
-            }
-            
-            let typeSpeed = isDeleting ? 50 : 100;
-            
-            if (!isDeleting && charIndex === currentWord.length) {
-                typeSpeed = 2000; // Pause at end
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
-                typeSpeed = 500; // Pause before new word
-            }
-            
-            setTimeout(type, typeSpeed);
-        }
-        
-        // Start typing
-        setTimeout(type, 1000);
-
-        // Mobile Menu Toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        const links = document.querySelectorAll('.nav-links li a');
-        
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = hamburger.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-        
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hamburger.querySelector('i').classList.remove('fa-times');
-                hamburger.querySelector('i').classList.add('fa-bars');
-            });
-        });
-
-        // Scroll Reveal Animation
+        // Scroll Reveal
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
-                
-                if (elementTop < windowHeight - elementVisible) {
+                if (elementTop < windowHeight - 50) {
                     reveals[i].classList.add("active");
                 }
             }
         }
         window.addEventListener("scroll", reveal);
-        reveal(); // Trigger on load
-
-        // Number Counter Animation
-        const counters = document.querySelectorAll('.stat-number');
-        let hasCounted = false;
-
-        function animateCounters() {
-            const statsSection = document.querySelector('.stats-section');
-            if (!statsSection) return;
-            
-            const position = statsSection.getBoundingClientRect().top;
-            
-            if (position < window.innerHeight - 100 && !hasCounted) {
-                hasCounted = true;
-                counters.forEach(counter => {
-                    const target = +counter.getAttribute('data-target');
-                    const duration = 2000; // ms
-                    const increment = target / (duration / 16); // 60fps
-                    
-                    let current = 0;
-                    const updateCounter = () => {
-                        current += increment;
-                        if (current < target) {
-                            counter.innerText = Math.ceil(current);
-                            requestAnimationFrame(updateCounter);
-                        } else {
-                            counter.innerText = target;
-                        }
-                    };
-                    updateCounter();
-                });
-            }
-        }
-        window.addEventListener('scroll', animateCounters);
+        reveal();
 
         // Portfolio Filter
         const filterBtns = document.querySelectorAll('.filter-btn');
         const portfolioCards = document.querySelectorAll('.portfolio-card');
-
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Remove active class
                 filterBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                
                 const filter = btn.getAttribute('data-filter');
-                
                 portfolioCards.forEach(card => {
                     if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.classList.remove('hide');
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'scale(1)';
-                        }, 50);
+                        card.style.display = 'block';
                     } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'scale(0.8)';
-                        setTimeout(() => {
-                            card.classList.add('hide');
-                        }, 300);
+                        card.style.display = 'none';
                     }
                 });
             });
         });
 
-        // FAQ Accordion
+        // FAQ
         const faqItems = document.querySelectorAll('.faq-item');
-        
         faqItems.forEach(item => {
             const question = item.querySelector('.faq-question');
-            
             question.addEventListener('click', () => {
                 const isActive = item.classList.contains('active');
-                
-                // Close all other items
-                faqItems.forEach(otherItem => {
-                    otherItem.classList.remove('active');
-                });
-                
-                // Toggle current item
-                if (!isActive) {
-                    item.classList.add('active');
-                }
+                faqItems.forEach(other => other.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
             });
-        });
-        
-        // Open first FAQ by default
-        if(faqItems.length > 0) {
-            faqItems[0].classList.add('active');
-        }
-
-        // Active Nav Link on Scroll
-        const sections = document.querySelectorAll('section');
-        const navItems = document.querySelectorAll('.nav-links a');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            if (current) {
-                navItems.forEach(item => {
-                    item.classList.remove('active');
-                    if (item.getAttribute('href').includes(current)) {
-                        item.classList.add('active');
-                    }
-                });
-            }
         });
     </script>
 </body>

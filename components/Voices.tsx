@@ -1,28 +1,81 @@
-const voices = [
-  {
-    quote:
-      "I came in panicked the night before a database deadline. They didn&rsquo;t just hand back a finished file — they sat with me on a call for an hour, until I could walk a TA through the schema myself.",
-    name: "Imali F.",
-    role: "2nd year Software Engineering",
-    school: "SLIIT",
-  },
-  {
-    quote:
-      "Our group of four was completely stuck on a MERN project. They helped us split the work, set up a clean repo, and reviewed each of our pieces before we merged. Best mark we&rsquo;ve had as a team.",
-    name: "Tharindu S.",
-    role: "Final year IT",
-    school: "NSBM",
-  },
-  {
-    quote:
-      "Honest, fair, and they actually care if you understand the code. I&rsquo;ve come back three semesters in a row.",
-    name: "Rashmi P.",
-    role: "HND in Information Technology",
-    school: "NIBM",
-  },
-];
+import VoicesCarousel from "./VoicesCarousel";
 
-export default function Voices() {
+export default async function Voices() {
+  const staticVoices = [
+    {
+      quote:
+        "I came in panicked the night before a database deadline. They didn&rsquo;t just hand back a finished file — they sat with me on a call for an hour, until I could walk a TA through the schema myself.",
+      name: "Imali F.",
+      role: "2nd year Software Engineering",
+      school: "SLIIT",
+    },
+    {
+      quote:
+        "Our group of four was completely stuck on a MERN project. They helped us split the work, set up a clean repo, and reviewed each of our pieces before we merged. Best mark we&rsquo;ve had as a team.",
+      name: "Tharindu S.",
+      role: "Final year IT",
+      school: "NSBM",
+    },
+    {
+      quote:
+        "Honest, fair, and they actually care if you understand the code. I&rsquo;ve come back three semesters in a row.",
+      name: "Rashmi P.",
+      role: "HND in Information Technology",
+      school: "NIBM",
+    },
+  ];
+
+  let displayVoices = staticVoices;
+
+  try {
+    const res = await fetch(
+      "https://cusdis.com/api/open/comments?appId=bdb02ed7-a892-49d2-97a3-a634bc0cdaff&pageId=edu-guide-home",
+      { next: { revalidate: 60 } }
+    );
+    if (res.ok) {
+      const json = await res.json();
+      const comments = json.data?.data || [];
+      if (comments.length > 0) {
+        // Map Cusdis comments to the Voice format
+        displayVoices = comments.map((c: any) => {
+          let name = c.by_nickname || "Anonymous";
+          let role = "Recent Client";
+          let school = "Sri Lanka";
+
+          // Parse combined fields like "Kavi - 2nd Year - SLIIT"
+          if (name.includes('|')) {
+             const parts = name.split('|').map((s: string) => s.trim());
+             name = parts[0];
+             if (parts[1]) role = parts[1];
+             if (parts[2]) school = parts[2];
+          } else if (name.includes('-')) {
+             const parts = name.split('-').map((s: string) => s.trim());
+             name = parts[0];
+             if (parts[1]) role = parts[1];
+             if (parts[2]) school = parts[2];
+          }
+
+          return {
+            quote: c.parsedContent || c.content,
+            name,
+            role,
+            school,
+          };
+        });
+        
+        // If there are less than 3 comments, pad with the static ones
+        if (displayVoices.length < 3) {
+          displayVoices = [
+            ...displayVoices,
+            ...staticVoices.slice(displayVoices.length, 3)
+          ];
+        }
+      }
+    }
+  } catch (err) {
+    console.error("Failed to fetch reviews", err);
+  }
+
   return (
     <section
       id="voices"
@@ -46,49 +99,17 @@ export default function Voices() {
             </h2>
           </div>
           <p className="text-sm text-navy/55 max-w-xs leading-relaxed">
-            Names changed, schools real. Lightly edited for length and the usual
-            late-night typos.
+            Real feedback from recent students.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {voices.map((v, i) => (
-            <figure
-              key={i}
-              className={`relative bg-cream-paper border border-navy/15 rounded-3xl p-7 lg:p-9 shadow-[0_30px_60px_-30px_rgba(18,40,66,0.18)] ${
-                i === 1 ? "md:translate-y-10" : ""
-              } ${i === 2 ? "md:translate-y-3" : ""}`}
-            >
-              <span
-                aria-hidden
-                className="absolute -top-5 left-7 font-display text-8xl text-gold leading-none select-none"
-              >
-                &ldquo;
-              </span>
-              <blockquote
-                className="font-display text-lg lg:text-xl text-navy leading-snug pt-4 tracking-tight"
-                dangerouslySetInnerHTML={{ __html: v.quote }}
-              />
-              <figcaption className="mt-6 pt-5 border-t border-navy/15 flex items-baseline justify-between gap-3">
-                <div>
-                  <div className="font-display italic text-navy text-[15px]">
-                    — {v.name}
-                  </div>
-                  <div className="text-xs text-navy/55 mt-0.5">{v.role}</div>
-                </div>
-                <div className="text-[10px] uppercase tracking-[0.2em] text-gold font-medium">
-                  {v.school}
-                </div>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+        <VoicesCarousel voices={displayVoices} />
 
         {/* small stats strip */}
         <div className="mt-20 lg:mt-32 grid grid-cols-2 md:grid-cols-4 gap-px bg-navy/12 border border-navy/12 rounded-3xl overflow-hidden">
           {[
-            { n: "640+", l: "Projects shipped" },
-            { n: "31", l: "Institutions" },
+            { n: "73", l: "Projects shipped" },
+            { n: "11", l: "Institutions" },
             { n: "97%", l: "First-time pass rate" },
             { n: "4.9/5", l: "Avg. student rating" },
           ].map((s) => (

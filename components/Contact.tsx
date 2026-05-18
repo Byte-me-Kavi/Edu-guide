@@ -54,14 +54,39 @@ export default function Contact() {
                 <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
                 Online now
               </span>
-              <span>Mon — Sat · 9am to 10pm IST</span>
-              <span className="text-cream/45">(Sundays we&rsquo;re slow)</span>
+              <span>Mon — Sun · 6am to 12pm</span>
             </div>
           </div>
 
           <div className="lg:col-span-5 space-y-3 w-full">
             <a
-              href="mailto:hello@eduguide.io"
+              href="https://wa.me/94789910287"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between gap-4 rounded-2xl bg-cream/[0.06] border border-cream/15 hover:bg-cream/[0.1] hover:border-gold/40 transition p-5"
+            >
+              <div className="flex items-center gap-4">
+                <div className="h-10 w-10 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-gold">
+                  <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-[11px] uppercase tracking-[0.18em] text-cream/55 mb-0.5">
+                    WhatsApp
+                  </div>
+                  <div className="font-display text-lg lg:text-xl">
+                    078 991 0287
+                  </div>
+                </div>
+              </div>
+              <span className="text-gold text-2xl transition-transform group-hover:translate-x-1">
+                →
+              </span>
+            </a>
+
+            <a
+              href="mailto:kaveeshatmdss@gmail.com"
               className="group flex items-center justify-between gap-4 rounded-2xl bg-cream/[0.06] border border-cream/15 hover:bg-cream/[0.1] hover:border-gold/40 transition p-5"
             >
               <div className="flex items-center gap-4">
@@ -76,7 +101,7 @@ export default function Contact() {
                     Email
                   </div>
                   <div className="font-display text-lg lg:text-xl">
-                    hello@eduguide.io
+                    kaveeshatmdss<wbr/>@gmail.com
                   </div>
                 </div>
               </div>
@@ -86,45 +111,23 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://wa.me/94770000000"
+              href="mailto:hasindubandara759@gmail.com"
               className="group flex items-center justify-between gap-4 rounded-2xl bg-cream/[0.06] border border-cream/15 hover:bg-cream/[0.1] hover:border-gold/40 transition p-5"
             >
               <div className="flex items-center gap-4">
                 <div className="h-10 w-10 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-gold">
-                  <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                  <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6">
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="m3 7 9 6 9-6" />
                   </svg>
                 </div>
                 <div>
                   <div className="text-[11px] uppercase tracking-[0.18em] text-cream/55 mb-0.5">
-                    WhatsApp
+                    Email
                   </div>
                   <div className="font-display text-lg lg:text-xl">
-                    +94 77 000 0000
+                    hasindubandara759<wbr/>@gmail.com
                   </div>
-                </div>
-              </div>
-              <span className="text-gold text-2xl transition-transform group-hover:translate-x-1">
-                →
-              </span>
-            </a>
-
-            <a
-              href="https://t.me/eduguide"
-              className="group flex items-center justify-between gap-4 rounded-2xl bg-cream/[0.06] border border-cream/15 hover:bg-cream/[0.1] hover:border-gold/40 transition p-5"
-            >
-              <div className="flex items-center gap-4">
-                <div className="h-10 w-10 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-gold">
-                  <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="m22 2-7 20-4-9-9-4Z" />
-                    <path d="M22 2 11 13" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="text-[11px] uppercase tracking-[0.18em] text-cream/55 mb-0.5">
-                    Telegram
-                  </div>
-                  <div className="font-display text-lg lg:text-xl">@eduguide</div>
                 </div>
               </div>
               <span className="text-gold text-2xl transition-transform group-hover:translate-x-1">
