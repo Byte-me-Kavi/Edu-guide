@@ -30,7 +30,7 @@ export default function Contact() {
           <div className="lg:col-span-7">
             <ScrollReveal variant="up">
               <div className="flex items-baseline gap-4 mb-8">
-                <span className="font-display italic text-gold text-xl">✱ 007</span>
+                <span className="font-display italic text-gold text-xl">✱ 008</span>
                 <span className="uppercase tracking-[0.22em] text-[11px] text-cream/60">
                   Get in touch
                 </span>

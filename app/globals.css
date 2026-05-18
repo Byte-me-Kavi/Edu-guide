@@ -212,3 +212,42 @@ details summary::-webkit-details-marker {
   background-clip: text;
   animation: shimmer 6s linear infinite;
 }
+
+/* Custom Text Reveal */
+@keyframes blur-up-loop {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(20px);
+  }
+  15%, 80% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+  92%, 100% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(-20px);
+  }
+}
+
+.animate-blur-up {
+  opacity: 0;
+  animation: blur-up-loop 3s cubic-bezier(0.2, 0.7, 0.2, 1) infinite both;
+}
+
+@keyframes draw-loop {
+  0%, 10% {
+    stroke-dashoffset: 320;
+    opacity: 0;
+  }
+  25%, 80% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  92%, 100% {
+    stroke-dashoffset: -320;
+    opacity: 0;
+  }
+}

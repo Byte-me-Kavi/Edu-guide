@@ -90,7 +90,7 @@ export default async function Voices() {
         <ScrollReveal variant="up">
           <div className="flex items-end justify-between gap-6 mb-14 flex-wrap">
             <div className="flex items-baseline gap-4">
-              <span className="font-display italic text-gold text-xl">✱ 005</span>
+              <span className="font-display italic text-gold text-xl">✱ 006</span>
               <h2 className="font-display text-4xl lg:text-6xl text-navy tracking-tightest leading-[1]">
                 Student{" "}
                 <em className="italic text-gold/90">voices</em>

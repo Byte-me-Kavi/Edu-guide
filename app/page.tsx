@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import Process from "@/components/Process";
 import WhyDifferent from "@/components/WhyDifferent";
 import Domains from "@/components/Domains";
+import Samples from "@/components/Samples";
 import Voices from "@/components/Voices";
 import Reviews from "@/components/Reviews";
 import Faq from "@/components/Faq";
@@ -20,6 +21,7 @@ export default function Home() {
         <Process />
         <WhyDifferent />
         <Domains />
+        <Samples />
         <Voices />
         <Reviews />
         <Faq />

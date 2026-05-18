@@ -29,6 +29,9 @@ export default function Nav() {
           <a href="#domains" className="hover:text-navy transition">
             Domains
           </a>
+          <a href="#samples" className="hover:text-navy transition">
+            Samples
+          </a>
           <a href="#voices" className="hover:text-navy transition">
             Reviews
           </a>

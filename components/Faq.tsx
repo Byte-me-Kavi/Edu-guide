@@ -37,7 +37,7 @@ export default function Faq() {
         <div className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
           <ScrollReveal variant="left">
             <div className="flex items-baseline gap-4 mb-6">
-              <span className="font-display italic text-gold text-xl">✱ 006</span>
+              <span className="font-display italic text-gold text-xl">✱ 007</span>
               <h2 className="font-display text-4xl lg:text-6xl text-navy tracking-tightest leading-[1]">
                 Questions,{" "}
                 <em className="italic text-gold/90">asked honestly</em>

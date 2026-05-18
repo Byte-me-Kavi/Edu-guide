@@ -30,16 +30,17 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <h1
-          className="rise font-display font-light text-[3rem] sm:text-6xl lg:text-[6rem] xl:text-[7rem] leading-[0.92] tracking-tightest text-navy max-w-[18ch]"
-          style={{ animationDelay: "180ms" }}
-        >
-          Find your way{" "}
-          <span className="relative inline-block">
+        <h1 className="font-display font-light text-[3rem] sm:text-6xl lg:text-[6rem] xl:text-[7rem] leading-[0.92] tracking-tightest text-navy max-w-[18ch]">
+          <span className="inline-block animate-blur-up" style={{ animationDelay: "150ms" }}>Find</span>{" "}
+          <span className="inline-block animate-blur-up" style={{ animationDelay: "220ms" }}>your</span>{" "}
+          <span className="inline-block animate-blur-up" style={{ animationDelay: "290ms" }}>way</span>{" "}
+          <span className="relative inline-block animate-blur-up" style={{ animationDelay: "360ms" }}>
             <span className="relative">through</span>
           </span>{" "}
-          the fog of{" "}
-          <em className="italic font-display text-gold relative whitespace-nowrap">
+          <span className="inline-block animate-blur-up" style={{ animationDelay: "430ms" }}>the</span>{" "}
+          <span className="inline-block animate-blur-up" style={{ animationDelay: "500ms" }}>fog</span>{" "}
+          <span className="inline-block animate-blur-up" style={{ animationDelay: "570ms" }}>of</span>{" "}
+          <em className="italic font-display text-gold relative inline-block whitespace-nowrap animate-blur-up" style={{ animationDelay: "640ms" }}>
             coursework.
             <svg
               aria-hidden
@@ -53,6 +54,7 @@ export default function Hero() {
                 strokeWidth="3"
                 fill="none"
                 strokeLinecap="round"
+                className="animate-[draw-loop_3s_ease-in-out_900ms_infinite_both] [stroke-dasharray:320] [stroke-dashoffset:320]"
               />
             </svg>
           </em>
