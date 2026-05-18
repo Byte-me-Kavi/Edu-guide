@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(frontend-design:frontend-design)",
+      "PowerShell(npm *)",
+      "PowerShell(npm run *)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 30; \"STATUS: $\\($r.StatusCode\\)\"; \"LENGTH: $\\($r.Content.Length\\)\"; $r.Content -match 'Find your way' | ForEach-Object { \"HERO_FOUND: $_\" }; $r.Content -match 'EduGuide' | ForEach-Object { \"BRAND_FOUND: $_\" }; $r.Content -match 'error|Error' | ForEach-Object { \"ERROR_PRESENT: $_\" } } catch { \"ERR: $_\" })",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 30; \\($r.Content -split \"`n\" | Where-Object { $_ -match 'error' -or $_ -match 'Error' }\\) | Select-Object -First 5)"
+    ]
+  }
+}
