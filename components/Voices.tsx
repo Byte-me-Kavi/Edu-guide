@@ -1,3 +1,4 @@
+import ScrollReveal, { StaggerReveal } from "./ScrollReveal";
 import VoicesCarousel from "./VoicesCarousel";
 
 export default async function Voices() {
@@ -36,13 +37,11 @@ export default async function Voices() {
       const json = await res.json();
       const comments = json.data?.data || [];
       if (comments.length > 0) {
-        // Map Cusdis comments to the Voice format
         displayVoices = comments.map((c: any) => {
           let name = c.by_nickname || "Anonymous";
           let role = "Recent Client";
           let school = "Sri Lanka";
 
-          // Parse combined fields like "Kavi - 2nd Year - SLIIT"
           if (name.includes('|')) {
              const parts = name.split('|').map((s: string) => s.trim());
              name = parts[0];
@@ -63,7 +62,6 @@ export default async function Voices() {
           };
         });
         
-        // If there are less than 3 comments, pad with the static ones
         if (displayVoices.length < 3) {
           displayVoices = [
             ...displayVoices,
@@ -81,51 +79,55 @@ export default async function Voices() {
       id="voices"
       className="relative border-t border-navy/10 bg-cream-deep/40 py-24 lg:py-32 overflow-hidden"
     >
-      {/* subtle ornament */}
       <div
         aria-hidden
-        className="absolute -top-10 right-10 font-display italic text-[10rem] lg:text-[14rem] text-gold/10 select-none leading-none"
+        className="absolute -top-10 right-10 font-display italic text-[10rem] lg:text-[14rem] text-gold/10 select-none leading-none gentle-float"
       >
         &ldquo;
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="flex items-end justify-between gap-6 mb-14 flex-wrap">
-          <div className="flex items-baseline gap-4">
-            <span className="font-display italic text-gold text-xl">✱ 005</span>
-            <h2 className="font-display text-4xl lg:text-6xl text-navy tracking-tightest leading-[1]">
-              Student{" "}
-              <em className="italic text-gold/90">voices</em>
-            </h2>
-          </div>
-          <p className="text-sm text-navy/55 max-w-xs leading-relaxed">
-            Real feedback from recent students.
-          </p>
-        </div>
-
-        <VoicesCarousel voices={displayVoices} />
-
-        {/* small stats strip */}
-        <div className="mt-20 lg:mt-32 grid grid-cols-2 md:grid-cols-4 gap-px bg-navy/12 border border-navy/12 rounded-3xl overflow-hidden">
-          {[
-            { n: "73", l: "Projects shipped" },
-            { n: "11", l: "Institutions" },
-            { n: "97%", l: "First-time pass rate" },
-            { n: "4.9/5", l: "Avg. student rating" },
-          ].map((s) => (
-            <div
-              key={s.l}
-              className="bg-cream-paper p-7 lg:p-8 text-center flex flex-col items-center justify-center min-h-[140px]"
-            >
-              <div className="font-display text-4xl lg:text-5xl text-navy tracking-tight">
-                {s.n}
-              </div>
-              <div className="mt-2 text-[11px] uppercase tracking-[0.18em] text-navy/55">
-                {s.l}
-              </div>
+        <ScrollReveal variant="up">
+          <div className="flex items-end justify-between gap-6 mb-14 flex-wrap">
+            <div className="flex items-baseline gap-4">
+              <span className="font-display italic text-gold text-xl">✱ 005</span>
+              <h2 className="font-display text-4xl lg:text-6xl text-navy tracking-tightest leading-[1]">
+                Student{" "}
+                <em className="italic text-gold/90">voices</em>
+              </h2>
             </div>
-          ))}
-        </div>
+            <p className="text-sm text-navy/55 max-w-xs leading-relaxed">
+              Real feedback from recent students.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal variant="fade" delay={200}>
+          <VoicesCarousel voices={displayVoices} />
+        </ScrollReveal>
+
+        <ScrollReveal variant="up" delay={400}>
+          <div className="mt-20 lg:mt-32 grid grid-cols-2 md:grid-cols-4 gap-px bg-navy/12 border border-navy/12 rounded-3xl overflow-hidden shadow-sm">
+            {[
+              { n: "73", l: "Projects shipped" },
+              { n: "11", l: "Institutions" },
+              { n: "97%", l: "First-time pass rate" },
+              { n: "4.9/5", l: "Avg. student rating" },
+            ].map((s) => (
+              <div
+                key={s.l}
+                className="bg-cream-paper p-7 lg:p-8 text-center flex flex-col items-center justify-center min-h-[140px]"
+              >
+                <div className="font-display text-4xl lg:text-5xl text-navy tracking-tight">
+                  {s.n}
+                </div>
+                <div className="mt-2 text-[11px] uppercase tracking-[0.18em] text-navy/55">
+                  {s.l}
+                </div>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

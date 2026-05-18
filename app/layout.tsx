@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   title: "EduGuide — A small studio for student work in IT",
   description:
     "Assignments, coding projects, web development, and final-year work across the entire IT domain — built, explained, and walked-through with you.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

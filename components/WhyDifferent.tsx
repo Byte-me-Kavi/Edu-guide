@@ -1,3 +1,5 @@
+import ScrollReveal from "./ScrollReveal";
+
 const pillars = [
   {
     t: "Live sessions",
@@ -58,69 +60,78 @@ export default function WhyDifferent() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="flex items-baseline gap-4 mb-10">
-          <span className="font-display italic text-gold text-xl">✱ 003</span>
-          <span className="uppercase tracking-[0.22em] text-[11px] text-cream/60">
-            What makes us different
-          </span>
-        </div>
+        <ScrollReveal variant="up">
+          <div className="flex items-baseline gap-4 mb-10">
+            <span className="font-display italic text-gold text-xl">✱ 003</span>
+            <span className="uppercase tracking-[0.22em] text-[11px] text-cream/60">
+              What makes us different
+            </span>
+          </div>
+        </ScrollReveal>
 
-        <p className="font-display font-light text-3xl sm:text-4xl lg:text-6xl leading-[1.05] tracking-tightest max-w-5xl">
-          We don&rsquo;t just do the work. We make sure you{" "}
-          <em className="italic text-gold">understand</em> it.
-        </p>
+        <ScrollReveal variant="up" delay={100}>
+          <p className="font-display font-light text-3xl sm:text-4xl lg:text-6xl leading-[1.05] tracking-tightest max-w-5xl">
+            We don&rsquo;t just do the work. We make sure you{" "}
+            <em className="italic text-gold">understand</em> it.
+          </p>
+        </ScrollReveal>
 
-        <p className="mt-8 max-w-2xl text-cream/65 leading-relaxed">
-          Three core promises for every project, from simple assignments to full thesis systems.
-        </p>
+        <ScrollReveal variant="fade" delay={200}>
+          <p className="mt-8 max-w-2xl text-cream/65 leading-relaxed">
+            Three core promises for every project, from simple assignments to full thesis systems.
+          </p>
+        </ScrollReveal>
 
         <div className="mt-14 grid md:grid-cols-3 gap-px bg-cream/10 border border-cream/15 rounded-3xl overflow-hidden">
           {pillars.map((p, i) => {
-            const isNavy = i % 2 !== 0; // index 1 is Navy, 0 and 2 are Cream
+            const isNavy = i % 2 !== 0;
             return (
-              <div
-                key={p.t}
-                className={`relative p-8 lg:p-10 transition group ${
-                  isNavy ? "bg-navy hover:bg-navy-deep" : "bg-cream-paper hover:bg-cream"
-                }`}
-              >
-                <div className={`${isNavy ? "text-gold" : "text-navy"} mb-5`}>{p.icon}</div>
-                <h3 className={`font-display text-2xl lg:text-3xl mb-3 tracking-tight ${
-                  isNavy ? "text-cream" : "text-navy"
-                }`}>
-                  {p.t}
-                </h3>
-                <p className={`leading-relaxed text-[15px] ${
-                  isNavy ? "text-cream/70" : "text-navy/70"
-                }`}>{p.d}</p>
-                <span
-                  aria-hidden
-                  className={`absolute top-6 right-6 font-display italic text-sm ${
-                    isNavy ? "text-gold/40" : "text-navy/40"
+              <ScrollReveal key={p.t} variant="up" delay={300 + i * 120}>
+                <div
+                  className={`relative p-8 lg:p-10 transition group ${
+                    isNavy ? "bg-navy hover:bg-navy-deep" : "bg-cream-paper hover:bg-cream"
                   }`}
                 >
-                  — 0{i + 1}
-                </span>
-              </div>
+                  <div className={`${isNavy ? "text-gold" : "text-navy"} mb-5`}>{p.icon}</div>
+                  <h3 className={`font-display text-2xl lg:text-3xl mb-3 tracking-tight ${
+                    isNavy ? "text-cream" : "text-navy"
+                  }`}>
+                    {p.t}
+                  </h3>
+                  <p className={`leading-relaxed text-[15px] ${
+                    isNavy ? "text-cream/70" : "text-navy/70"
+                  }`}>{p.d}</p>
+                  <span
+                    aria-hidden
+                    className={`absolute top-6 right-6 font-display italic text-sm ${
+                      isNavy ? "text-gold/40" : "text-navy/40"
+                    }`}
+                  >
+                    — 0{i + 1}
+                  </span>
+                </div>
+              </ScrollReveal>
             );
           })}
         </div>
 
         {/* fine print */}
-        <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-cream/55">
-          <span className="flex items-center gap-2">
-            <span className="text-gold">✱</span> No subscriptions
-          </span>
-          <span className="flex items-center gap-2">
-            <span className="text-gold">✱</span> No bots, no templates
-          </span>
-          <span className="flex items-center gap-2">
-            <span className="text-gold">✱</span> Quoted up front, every time
-          </span>
-          <span className="flex items-center gap-2">
-            <span className="text-gold">✱</span> Real human, first reply
-          </span>
-        </div>
+        <ScrollReveal variant="fade" delay={600}>
+          <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-cream/55">
+            <span className="flex items-center gap-2">
+              <span className="text-gold">✱</span> No subscriptions
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="text-gold">✱</span> No bots, no templates
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="text-gold">✱</span> Quoted up front, every time
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="text-gold">✱</span> Real human, first reply
+            </span>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

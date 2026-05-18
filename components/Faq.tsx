@@ -1,3 +1,5 @@
+import ScrollReveal, { StaggerReveal } from "./ScrollReveal";
+
 const faqs = [
   {
     q: "Will the work pass plagiarism checks?",
@@ -33,51 +35,57 @@ export default function Faq() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-12 gap-12 lg:gap-16">
         <div className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
-          <div className="flex items-baseline gap-4 mb-6">
-            <span className="font-display italic text-gold text-xl">✱ 006</span>
-            <h2 className="font-display text-4xl lg:text-6xl text-navy tracking-tightest leading-[1]">
-              Questions,{" "}
-              <em className="italic text-gold/90">asked honestly</em>
-            </h2>
-          </div>
-          <p className="text-navy/70 leading-relaxed max-w-sm">
-            If something isn&rsquo;t here, send us the question. We answer all
-            messages within a day, usually within an hour during exam weeks.
-          </p>
+          <ScrollReveal variant="left">
+            <div className="flex items-baseline gap-4 mb-6">
+              <span className="font-display italic text-gold text-xl">✱ 006</span>
+              <h2 className="font-display text-4xl lg:text-6xl text-navy tracking-tightest leading-[1]">
+                Questions,{" "}
+                <em className="italic text-gold/90">asked honestly</em>
+              </h2>
+            </div>
+            <p className="text-navy/70 leading-relaxed max-w-sm">
+              If something isn&rsquo;t here, send us the question. We answer all
+              messages within a day, usually within an hour during exam weeks.
+            </p>
+          </ScrollReveal>
 
           {/* paper-ish marginalia */}
-          <div className="mt-10 hidden lg:block">
-            <div className="dotted-rule text-navy/30 mb-3" />
-            <p className="font-display italic text-navy/55 text-sm leading-relaxed">
-              &ldquo;The only foolish question is the one you didn&rsquo;t ask before
-              the viva.&rdquo;
-            </p>
-            <p className="mt-2 text-[11px] uppercase tracking-[0.2em] text-navy/40">
-              — a tutor of ours, once
-            </p>
-          </div>
+          <ScrollReveal variant="fade" delay={200}>
+            <div className="mt-10 hidden lg:block">
+              <div className="dotted-rule text-navy/30 mb-3" />
+              <p className="font-display italic text-navy/55 text-sm leading-relaxed">
+                &ldquo;The only foolish question is the one you didn&rsquo;t ask before
+                the viva.&rdquo;
+              </p>
+              <p className="mt-2 text-[11px] uppercase tracking-[0.2em] text-navy/40">
+                — a tutor of ours, once
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
 
         <div className="lg:col-span-8 divide-y divide-navy/15 border-y border-navy/15">
-          {faqs.map((f, i) => (
-            <details key={i} className="group py-6 lg:py-7">
-              <summary className="flex items-start justify-between gap-6 cursor-pointer list-none">
-                <h3 className="font-display text-xl lg:text-2xl text-navy pr-6 leading-snug tracking-tight">
-                  <span className="text-gold italic mr-2 font-display">Q.</span>
-                  {f.q}
-                </h3>
-                <span className="text-gold text-3xl leading-none mt-0.5 transition-transform duration-300 group-open:rotate-45 select-none">
-                  +
-                </span>
-              </summary>
-              <p
-                className="mt-4 pl-8 text-navy/75 leading-relaxed max-w-prose text-[15.5px]"
-                dangerouslySetInnerHTML={{
-                  __html: `<span class="font-display italic text-gold mr-1">A.</span> ${f.a}`,
-                }}
-              />
-            </details>
-          ))}
+          <StaggerReveal stagger={100} variant="up">
+            {faqs.map((f, i) => (
+              <details key={i} className="group py-6 lg:py-7">
+                <summary className="flex items-start justify-between gap-6 cursor-pointer list-none">
+                  <h3 className="font-display text-xl lg:text-2xl text-navy pr-6 leading-snug tracking-tight">
+                    <span className="text-gold italic mr-2 font-display">Q.</span>
+                    {f.q}
+                  </h3>
+                  <span className="text-gold text-3xl leading-none mt-0.5 transition-transform duration-300 group-open:rotate-45 select-none">
+                    +
+                  </span>
+                </summary>
+                <p
+                  className="mt-4 pl-8 text-navy/75 leading-relaxed max-w-prose text-[15.5px]"
+                  dangerouslySetInnerHTML={{
+                    __html: `<span class="font-display italic text-gold mr-1">A.</span> ${f.a}`,
+                  }}
+                />
+              </details>
+            ))}
+          </StaggerReveal>
         </div>
       </div>
     </section>

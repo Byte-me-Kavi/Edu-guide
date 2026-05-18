@@ -147,3 +147,68 @@ details summary::-webkit-details-marker {
     radial-gradient(closest-side at 78% 65%, rgba(27, 58, 92, 0.08), transparent 70%);
   pointer-events: none;
 }
+
+/* ── Scroll Reveal System ── */
+.sr {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.sr-up {
+  transform: translateY(32px);
+}
+
+.sr-left {
+  transform: translateX(-32px);
+}
+
+.sr-right {
+  transform: translateX(32px);
+}
+
+.sr-fade {
+  transform: none;
+}
+
+.sr-scale {
+  transform: scale(0.95);
+}
+
+.sr-visible {
+  opacity: 1 !important;
+  transform: translateY(0) translateX(0) scale(1) !important;
+}
+
+/* Subtle float for decorative elements */
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.gentle-float {
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+/* Gold shimmer for highlights */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--gold) 0%,
+    var(--gold-pale) 25%,
+    var(--gold) 50%,
+    var(--gold-pale) 75%,
+    var(--gold) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 6s linear infinite;
+}
